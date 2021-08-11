@@ -21,16 +21,19 @@ curl --location --request POST 'http://m1-bob.apron.network:8082/service' \
 --data-raw '{
     "id" : "m1-alice-currency_apron_network:8080",
     "domain_name": "m1-alice-currency.apron.network",
-    "providers": [
-        {
-            "id" : "test_provider1",
-            "name": "USDCNY currency",
-            "desc": "Currency of USDCNY",
-            "base_url": "http://api.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4",
+    "name": "Exchange Rate",
+	"desc": "To get the current exchange rate of different currencies.",
+	"logo": "http://is1.mzstatic.com/image/thumb/Purple122/v4/3a/26/a4/3a26a401-2b27-30d0-b208-12b25e0f317c/source/512x512bb.jpg",
+	"usage": "Just run the command `curl http://m1-alice-currency.apron.network:8080` to get the current exhange rate. More information please refer the official documents.",
+	"providers": [
+		{
+			"id": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+			"name": "Alice",
+			"desc": "Alice's exchange rate service",
+			"base_url": "http://api.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4",
             "schema": "http"
-        }
-
-    ]
+		}
+	]
 }'
 
 curl --location --request POST 'http://m1-bob.apron.network:8082/service' \
