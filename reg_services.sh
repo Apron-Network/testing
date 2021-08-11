@@ -5,11 +5,15 @@ curl --location --request POST 'http://m1-bob.apron.network:8082/service' \
 --data-raw '{
     "id" : "m1-alice_apron_network:8080",
     "domain_name": "m1-alice.apron.network",
+     "name": "Httpbin",
+	"desc": "httpbin service for testing purpose.",
+	"logo": "https://via.placeholder.com/150?text=httpbin",
+	"usage": "Just run the command `curl http://m1-alice.apron.network:8080`. More information please refer the official documents.",
     "providers": [
         {
-            "id" : "test_provider1",
-            "name": "httpbin",
-            "desc": "httpbin service for testing",
+            "id" : "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+            "name": "Alice",
+            "desc": "Alice\'s httpbin service for testing",
             "base_url": "https://httpbin.org/anything",
             "schema": "http"
         }
@@ -29,7 +33,7 @@ curl --location --request POST 'http://m1-bob.apron.network:8082/service' \
 		{
 			"id": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
 			"name": "Alice",
-			"desc": "Alice's exchange rate service",
+			"desc": "Alice\'s exchange rate service",
 			"base_url": "http://api.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4",
             "schema": "http"
 		}
